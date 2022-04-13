@@ -15,6 +15,9 @@ class Todo(models.Model):
     ]
     priority = models.Charfield(max_length = 6, choices = PRIORITY_CHOICES, default = LOW)
 
+    def __str__(self):
+        return self.label and self.priority
+        
 class Category(models.Model):
     label = models.CharField(max_length=250)
     user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
