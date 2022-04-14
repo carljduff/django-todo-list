@@ -16,7 +16,9 @@ class TodoViewSet(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
     # permission_classes = [permissions.IsAuthenticated]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ('user__first_name',)
+    # filterset_fields = ('user__first_name',)
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    # filterset_fields = ['user_id']
     # search_fields = ['=user', 'User.first_name']
 
 class CategoryViewSet(viewsets.ModelViewSet):
