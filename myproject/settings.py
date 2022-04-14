@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
+    
 ]
 
 # Database
@@ -136,6 +137,8 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny'
     ]
+    
 }
