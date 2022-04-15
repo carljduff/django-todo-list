@@ -5,8 +5,9 @@ from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
 from rest_framework.filters import SearchFilter, OrderingFilter
 from .serializers import TodoSerializer, CategorySerializer, EventSerializer, UserSerializer
-from .views import *
 from .models import *
+
+
 
 class TodoViewSet(viewsets.ModelViewSet):
     """
