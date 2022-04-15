@@ -17,7 +17,6 @@ class TodoViewSet(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
     # permission_classes = [permissions.IsAuthenticated]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     # /api/todos?user__first_name= 
     filterset_fields = ('user__first_name',)
     # filterset_fields = ['user_id']
